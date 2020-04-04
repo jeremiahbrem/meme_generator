@@ -1,0 +1,97 @@
+body {
+    background-color: mediumturquoise;
+}
+h1,h2 {
+    font-family: Comic Sans MS;
+    color: darkblue;
+    
+}
+
+h1 {
+    position: relative;
+    font-size: 75px;
+    text-shadow: 10px 0px 10px white;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-shadow: 3px 0px 3px white;
+    margin-left: 10%;
+    width: 300px;
+}
+
+#submitMeme {
+    background-color: darkmagenta;
+    color: white;
+}
+
+#container {
+    margin-left: 10%;
+    width: 200px;
+    margin-bottom: 0px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+div {
+    position: relative;
+    width: 350px;
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 350px;
+}
+
+#memes {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+    display: flex;
+    min-height: 500px;
+    width: 65%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(146, 18, 146);
+    border: 2px solid black;    
+}
+
+.topText, .botText, #memeMe, #scotty {
+    position: absolute;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+#memeMe, #scotty {
+    font-size: 30px;
+}
+
+.topText, #memeMe {
+    top: 2px;
+    max-width: 300px;
+}
+
+.botText, #scotty {
+    bottom: 2px;
+    max-width: 300px;
+}
+
+#starTrek {
+    position: absolute;
+    left: 100px;
+    bottom: 125px;
+    z-index: -1;
+    width: 300px;
+}
