@@ -1,30 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
+    display: flex;
+    flex-wrap: wrap;   
     background-color: mediumturquoise;
 }
 h1,h2 {
     font-family: Comic Sans MS;
     color: darkblue;
-    
 }
 
-h1 {
-    position: relative;
-    font-size: 75px;
-    text-shadow: 10px 0px 10px white;
-    margin-top: 0px;
-    margin-bottom: 2px;
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-div {
+.formPic, .memes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.formPic {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
+}
+
+.header {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+h1 {
+    font-size: 25px;
+    text-shadow: 10px 0px 10px white;
 }
 
 h2 {
+    font-size: 20px;
     text-shadow: 3px 0px 3px white;
-    margin-left: 10%;
-    width: 300px;
+    margin-bottom: 10px;
+}
+
+#image, #top, #bottom {
+    width: 200px;
 }
 
 #submitMeme {
@@ -32,66 +57,87 @@ h2 {
     color: white;
 }
 
-#container {
-    margin-left: 10%;
-    width: 200px;
-    margin-bottom: 0px;
-}
-
 input {
     margin-bottom: 10px;
 }
 
-div {
+.starTrek {
     position: relative;
-    width: 350px;
-    text-align: center;
-    margin-right: 15px;
-    margin-bottom: 15px;
+    width: 200px;
+    align-items: center;
 }
-
 img {
-    width: 350px;
+    width: 200px;
 }
 
-#memes {
-    position: absolute;
-    top: 110px;
-    right: 0px;
+.memes {
     display: flex;
+    flex-direction: column;
     min-height: 500px;
-    width: 65%;
-    flex-wrap: wrap;
-    flex-direction: row;
     background-color: rgb(146, 18, 146);
     border: 2px solid black;    
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.memes > div{
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 220px;
 }
 
 .topText, .botText, #memeMe, #scotty {
-    position: absolute;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
+    position: absolute;
 }
 
 #memeMe, #scotty {
-    font-size: 30px;
+    font-size: 20px;
+    width: 150px;
 }
 
-.topText, #memeMe {
-    top: 2px;
-    max-width: 300px;
+#memeMe, .topText {
+    top: 5px;
+    width: 200px;
 }
 
-.botText, #scotty {
-    bottom: 2px;
-    max-width: 300px;
+#scotty, .botText {
+    bottom: 5px;
+    width: 200px;
 }
 
-#starTrek {
-    position: absolute;
-    left: 100px;
-    bottom: 125px;
-    z-index: -1;
-    width: 300px;
+.topText, .botText {
+    font-size: 15px;
 }
+
+@media only screen and (min-width: 700px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .formPic, .memes {
+        width: 50%;
+    }
+
+    .formPic {
+        position: fixed;
+    }
+
+    .memes {
+        position: absolute;
+        right: 0px;
+    }
+}
+
+
+
+
+

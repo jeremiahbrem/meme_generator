@@ -7,7 +7,7 @@ form.addEventListener('submit', function(e) {
     const bottom = document.getElementById('bottom');
     if (image.value != "") {
         const div = document.createElement('div');
-        const memes = document.getElementById('memes');
+        const memes = document.querySelector('.memes');
         memes.appendChild(div);
         const img = document.createElement('img');
         img.src = image.value;
@@ -19,14 +19,6 @@ form.addEventListener('submit', function(e) {
         const btmText = document.createElement('div');
         btmText.className = 'botText';
         btmText.innerText = bottom.value;
-        if (img.height < 350) {
-            topText.style.fontSize = '20px';
-            btmText.style.fontSize = '20px';
-        }
-        else {
-            topText.style.fontSize = '30px';
-            btmText.style.fontSize = '30px';
-        }
         div.prepend(btmText);
         addRemoveButton(div);
         image.value = "";
@@ -38,7 +30,7 @@ form.addEventListener('submit', function(e) {
 function addRemoveButton(div) {
     const button = document.createElement('button');
     button.innerText = 'x';
-    div.appendChild(button);
+    div.append(button);
     button.addEventListener('click', function(e) {
         div.remove();
     })
